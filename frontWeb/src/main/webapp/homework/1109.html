@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+.box1{border-left-width:5px;height:50px;
+		border-left-style:solid;
+		border-left-color:red;}
+.box2{border-top-width:5px;height:50px;
+		border-top-style:dotted;
+		border-top-color:yellow;}
+.box3{border-right-width:5px;height:50px;
+		border-right-style:double;
+		border-right-color:blue;}
+.box4{border-bottom-width:5px;height:50px;
+		border-bottom-style:dashed;
+		border-bottom-color:pink;}
+		
+div.chicken{
+		width:50%;height:200px;border:5px double black;
+		background-size:200px 200px;
+		background-image:url("../a01_img/chicken.jpg");
+		background-repeat:no-repeat;
+		background-position:top center;
+	}
+	
+.button1{box-shadow:10px 10px 5px darkgray;}
+	p.button2{text-shadow:3px 3px 1px darkgray;text-align:center;font-weight:900}
+	div{
+		margin:20px;
+		width:50px;
+		height:50px;
+		padding:10px;
+		border:10px solid lightgray;
+		border-radius:50px;
+		background-color:linen;
+	}
+	
+	h3{
+		display:block;
+		width:200px;
+		height:30px;
+		background:linen;
+		border:3px solid pink;
+		text-align:center;
+	}	
+	li{
+		display:inline;
+		border:1px solid navy;
+		background:linen;
+	}
+	span{
+		display:inline-block;
+		border:1px dotted white;
+		background:pink;
+		margin:10px;
+	}
+	
+	h2{
+		display:inline-block;
+		height:50px;width:50px;
+		border:1px solid lightgray;
+		text-align:center;
+		color:white;
+		background:skyblue;
+	}
+	#down:hover{	
+		position:relative;
+		left:10px;	
+		top:10px;
+		background:pink;
+	}
+	#up:hover{
+		position:relative;
+		right:10px;	
+		bottom:10px;
+		background:pink;
+	}
+*/	
+</style>
+</head>
+<body>
+<!-- 
+2022-11-09
+[1단계:개념] 1. box형태의 태그가 가지고 있는 요소(margin, border, padding)의 범위를 기술하고,
+           각, 기능별로 설정할 수 있는 내용을 예제를 통해서 기술하세요
+	# css3의 박스 모델
+	1. html 태그는 사각형 박스로 다루어진다.
+		1) 각 html 태그 요소를 하나의 박스로 다룬다.
+		2) 박스 크기, 배경, 색, 여백, 옆 박스와의 거리 등 제어 가능
+	2. div 박스 모델
+		가장 내부 컨텐트로 부터
+		==> 패딩(padding) ==> 테두리(border) ==> 여백(margin)
+		으로 되어 있다.
+		컨텐츠 : html 태그의 텍스트나 이미지가 출력되는 부분
+		패딩 : 컨텐츠를 직접 둘러싸고 있는 내부 여백
+		테두리 : 패딩 외부의 테두리로서, 직선이나 점선 혹은 이미지로 테두리를 그릴
+			수 있다.
+		여백 : 박스의 맨 바깥 영역이면 테두리 바깥의 공간으로 인접한 아래위 이웃
+			태그의 박스와의 거리
+[1단계:개념] 2. border 상하좌우 위치와 형태를 설정하는 속성과 속성값을 기술하세요..
+	# 박스 모델의 색, 테두리, 단축 프로퍼티
+	1. 박스의 위치 옵션
+		1) border-left-width
+			left, right, top, bottom
+			방향별로 굵기 옵션을 설정 할 수 있음.
+	2. 박스의 형태 옵션
+		1) border-style
+			dotted, solid, double
+	ps) 위와 같이 위치와 형태에 따른 옵션 내용을 변경하여 적절하게 처리할 수 있다.
+[1단계:확인] 3. border의 4가지 방향 모두 다른 style과 색상을 설정하여 출력하세요
+	<h2>박스모델</h2>
+	<p class="box1">박스1</p>
+	<p class="box2">박스2</p>
+	<p class="box3">박스3</p>
+	<p class="box4">박스4</p>
+[1단계:개념] 4. border-radius의 속성 옵션을 기술하세요.
+	# 둥근 모서리 테두리 만들기(border-radius)
+	1. 테두리의 모서리를 둥글게 만듦
+		1) border-radius:50px
+			모든 테두리에 둥글기 설정
+		2) border-radius: 0px 20px 40px 60px;
+			왼쪽 상단부터 시계방향으로 둥글기 설정 처리
+[1단계:개념] 5. 배경이미지 관련 속성을 예제를 통해 기술하세요.
+	# 배경 다루기
+	1. 배경 색이나 이미지 지정
+		1) background-color : 배경색상
+		2) background-image : 배경이미지지정..
+			ex) background-image:url("해당이미지(상대/절대주소)")
+	2. 배경 이미지의 위치
+		1) background-position : center center;
+			박스 중간에 이미지 출력
+	3. 배경 이미지 반복 출력
+		1) background-repeat:reapt-y : 위에서 아래로 이미지 반복 출력
+[1단계:확인] 6. 상품을 소개하는 문자열과 상품이미지를 box에서 문자열과 배경이미지로 처리해보세요.
+	<div class="chicken">
+		<p style="text-align:center;font-size:20px;">치킨</p>
+	</div>
+[1단계:개념] 7. text-shadow와 box-shadow의 옵션을 기술하세요.
+	# 텍스트 그림자 text-shadow
+	1. 형식
+		text-shadow:h-shadow v-shadow blur_radius color|none
+	2. 속성
+		h-shadow/v-shadow : 원본 텍스트와 그림자 텍스트 사이의 수평/수직 거리
+		blur-radius : 흐릿한 그림자를 만드는 효과로 흐릿하게 번지는 길이
+		color : 그림자 색
+		none : 그림자 효과 없음.
+	# 박스 그림자, box-shadow
+	1. 박스 전체에 그림자 효과
+	2. box-shadow : h-shadow v-shadow 
+			blur-radius spread-radius color |none|inset
+		- spread-radius : 그림자 크기(선태, 디폴트 0)
+		- inset : 음각 박스로 보이게 박스 상단 안쪽(왼쪽과 위쪽)에 그림자 형성
+[1단계:확인] 8. border-radius와 text-shadow, border를 혼합하여 문자열이 버튼이미지 모양이 되게 둥근 테두리로 처리해보세요
+	<div class="button1">
+		<p class="button2">버튼</p>
+	</div>
+[1단계:개념] 9. display의 3가지 속성의 특성을 설명하세요.
+	# 박스의 유형 제어 : display
+	- 원래 태그가 가지고 있던 block, inline속성을 변경 하게 해준다.
+	1. block box(display:block;)
+		1) 항상 새 라인에서 시작
+		2) 블록 박스 내에만 배치
+		3) 옆에 다른 요소 배치 불가능
+		4) width, height으로 크기 조절
+		5) padding, border, margin 조절 가능
+	2. inline box(display:inline;)
+		1) 새 라인에서 시작 못함. 라인 안(inline)에 있음
+		2) 모든 박스 내 배치 가능
+		3) 옆에 다른 요소 배치 가능
+		4) width와 height으로 크기 조절 불가능
+		5) margin-top, margin-bottom 조절 불가능
+	3. inline block box(display:inline-block;)
+		1) inline의 속성
+			- 새 라인에서 시작 못함
+			- 라인 안(inline)에 있음
+			- 모든 박스 내 배치 가능
+			- 옆에 다른 요소 배치 가능
+		2) block 속성
+			- width와 height 크기 조절 가능
+			- padding, border, margin의 조절 가능
+[1단계:확인] 10. li 태그를 inline으로  h3를 block으로  span을 line-block으로 설정하여 출력하세요
+	<h3>가고 싶은 여행지</h3>
+	<ul>
+		<li>영국<span>런던</span></li>
+		<li>프랑스<span>파리</span></li>
+		<li>미국<span>뉴욕</span></li>
+	</ul>
+[1단계:확인] 11. div 하위에 h2를 안녕하세요를 문자 하나하나 마다 inline-block으로 나열하고
+            class로 up/down으로 선언 후, 가상클래스로 커서를 위치할 때 마다 위/아래로 움직이게 처리하세요.
+	<div>
+		<h2 id="up">안</h2>
+		<h2 id="down">녕</h2>
+		<h2 id="up">하</h2>
+		<h2 id="down">세</h2>
+		<h2 id="up">요</h2>
+	</div>
+ -->
+<!-- 정답
+[1단계:확인] *6. 상품을 소개하는 문자열과 상품이미지를 box에서 문자열과 배경이미지로 처리해보세요.
+	
+[1단계:확인] *8. border-radius와 text-shadow, border를 혼합하여 문자열이 버튼이미지 모양이 되게 둥근 테두리로 처리해보세요
+	<style>
+	div#btn01{border:3px solid yellow;
+				border-radius:10px;
+				text-shadow:3px 3px 5px blue;
+				text-align:center;
+				padding:20px;
+				width:50px;height:10px;background:navy;color:white;
+			}
+	</style>
+	<div id="btn01">버튼</div>
+[1단계:확인] *11. div 하위에 h2를 안녕하세요를 문자 하나하나 마다 inline-block으로 나열하고
+            class로 up/down으로 선언 후, 가상클래스로 커서를 위치할 때 마다 위/아래로 움직이게 처리하세요.
+	<style>
+	div.pos01>h2{background:red;color:orange;width:30px;height:30px;
+				 display:inline-block;text-align:center;
+				}
+	h2.up:hover{position:relative;bottom:10px;right:10px;background:navy;}
+	h2.down:hover{position:relative;top:10px;left:10px;background:navy;}
+	</style>
+	<div class="pos01">
+		<h2 class="up">안</h2>
+		<h2 class="down">녕</h2>
+		<h2 class="up">하</h2>
+		<h2 class="down">세</h2>
+		<h2 class="up">요</h2>
+	</div>
+ -->
+</body>
+</html>

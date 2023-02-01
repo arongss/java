@@ -1,0 +1,43 @@
+package javaexp.baekjoon;
+
+import java.util.*;
+
+public class Main {
+	public static boolean funtion(int X) {
+		boolean b = true;
+		// X가 100미만인 경우엔 무조건 한수
+		if(X >= 100) { 
+			int now = X % 10;
+			X /= 10;
+			int next = X % 10;
+			X /= 10;
+			int diff = now - next;
+			while(X != 0) { // 각 자리수가 등차수열인지 판별
+				now = next;
+				next = X % 10;
+				X /= 10;
+				if(now - next != diff) { // 등차수열이 아니라면 탈출
+					b = false;
+					break;
+				}
+			}
+		}
+		return b;
+	}
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		boolean[] check = new boolean[1001];
+		int[] ans = new int[1001];
+		int cnt = 0;
+		int N = sc.nextInt();	
+		for(int i = 1; i <= 1000; i++) {
+			if(funtion(i)) {
+				check[i] = true;
+				cnt++;
+			}
+			ans[i] = cnt; // 1~i 사이에서의 한수 개수(cnt)
+		}
+		System.out.println(ans[N]);
+		sc.close();
+	}
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>비밀번호 변경 - 에브리타임</title>
+<link href="../project_3/etcss.css" rel="stylesheet">
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+function change(){
+	alert("현재 비밀번호를 입력해주세요.");
+}
+</script>
+</head>
+<body>
+<div>
+<header>
+<div class="head">
+	<div class="wrap">
+		<div class="logo">
+			<a>
+				<figure class="logoimage"></figure>
+			</a>
+			<h1>
+				<p class="subname">에브리타임</p>
+				<p class="name">대학교</p>
+			</h1>
+		</div>
+		<nav>
+			<div><a>게시판</a></div>
+			<div><a>시간표</a></div>
+			<div><a>강의실</a></div>
+			<div><a>학점계산기</a></div>
+			<div><a>친구</a></div>
+			<div><a>책방</a></div>
+			<div><a>캠퍼스픽</a></div>
+		</nav>
+		<div class="account">
+			<a class="iconms"></a>
+			<a class="iconmy"></a>
+		</div>
+	</div>
+</div>
+</header>
+
+<form class="container">
+	<section>
+		<h1>비밀번호 변경</h1>
+		<div class="input">
+			<div class="label">
+				<label>새 비밀번호</label>
+				<p>영문, 숫자, 특문이 2종류 이상 조합된 8~20자</p>
+			</div>
+			<input type="password" maxlength="20" placeholder="새 비밀번호"/>
+			<input type="password" maxlength="20" placeholder="새 비밀번호 확인">
+		</div>
+		<div class="input">
+			<div class="label">
+				<label>현재 비밀번호</label>
+			</div>
+			<input type="password" maxlength="20" placeholder="현재 비밀번호"/>
+		</div>
+		<div class="rules">
+			<p>
+				<strong>※ 혹시 타인에게 계정을 양도하려고 하시나요?</strong><br>
+				에브리타임 이용약관에서는 타인에게 계정 판매, 양도 및 대여 등을 엄격하게 금지하고 있습니다.<br>
+				모니터링 시스템에 의해 계정 양도가 적발될 경우 해당 계정은 영구 정지, 탈퇴 등의 조치가 가해지며, 계정 양도로 인해 사기, 불법 행위가 발생할 경우 관련법에 따라 
+				<span class="caution">법적 책임을 지게 될 수 있습니다.</span>
+			</p>
+			<p>
+				<strong>※ 타인에 의한 계정 사용이 의심되시나요?</strong><br>
+				개인정보 보호를 위해 비밀번호를 변경하여 주시기 바랍니다. 비밀번호를 변경하면 
+				<span class="caution">모든 디바이스(앱, 브라우저 등)에서 즉시 로그아웃 처리됩니다.</span>
+			</p>
+		</div>
+		<input type="submit" value="비밀번호 변경" onclick="change()"/> 
+	</section>
+</form>
+
+<footer>
+	<a>이용약관</a>
+	<a>개인정보처리방침</a>
+	<a>청소년보호정책</a>
+	<a>커뮤니티이용규칙</a>
+	<a>문의하기</a>
+	<a>© 에브리타임</a>
+</footer>
+</div>
+</body>
+<script type="text/javascript">
+	
+</script>
+</html>

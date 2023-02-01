@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;A01_Dao.java&apos; to &apos;javaexp3&apos;" description="Move &apos;A01_Dao.java&apos; to &apos;javaexp3&apos;" destination="src/javaexp3" element1="/javaexp/src/javaexp/a13_database/A01_Dao.java" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1671426478965" updateReferences="true"/>
+</session>

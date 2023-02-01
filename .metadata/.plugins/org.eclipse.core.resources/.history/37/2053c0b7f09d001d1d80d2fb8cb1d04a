@@ -1,0 +1,14 @@
+package springweb.a05_mvc.a01_controller;
+
+import org.springframework.stereotype.Controller;
+
+import springweb.z01_vo.Dept;
+
+@Controller
+public class A02_DeptController {
+	
+	public String deptList( Dept sch) {
+		
+		return "WEB-INF\\views\\a05_mvc\\a02_deptList.jsp";
+	}
+}

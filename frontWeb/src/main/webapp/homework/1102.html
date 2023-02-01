@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		th{background-color:yellow;}
+		th, td{text-align:center;border:1px solid green;}
+		table{border-collapse:collapse;}
+	</style>
+</head>
+<body>
+<!-- 
+2022-11-02
+[1단계:확인] 1. 온라인 쇼핑몰에 있는 내용과 같이 특정한 물품 2개 이미지와 함께 상세 설명 내용과 함께 표시되는
+            형식으로 테이블(3X3)을 구성하여 출력하세요
+           no  물품이미지 물품정보(물품명/가격/기타정보표기) 
+<table align="center" cellpadding="10" border="1" width="500">
+	<col width="20%"><col width="40%"><col width="40%">
+	<thead>
+		<tr><th>no</th><th>물품이미지</th><th>물품정보</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>1</td><td><img src="/a00_img/apple.jpg" width="100" height="100"/></td><td>물품명:사과<br>가격:6000<br>기타정보없음</td></tr>
+		<tr><td>2</td><td><img src="/a00_img/banana.jpg" width="100" height="100"/></td><td>물품명:바나나<br>가격:5000<br>기타정보없음</td></tr>
+		<tr><td>3</td><td><img src="/a00_img/mango.jpg" width="100" height="100"/></td><td>물품명:망고<br>가격:10000<br>기타정보없음</td></tr>
+	</tbody>
+</table>
+[1단계:개념] 2. 하이퍼링크의 기본 속성을 예제와 함께 기술하세요.
+# 하이퍼링크(hyperlink)란?
+	1) 다른 html 페이지의 연결 고리
+		- 같은 웹 사이트의 다른 html 페이지
+		- 다른 웹 사이트의 html 페이지 모두 연결 가능
+	2) 하이퍼링크는 텍스트나 이미지로 작성
+[1단계:확인] 3. 정렬리스트로 목차 3가지를 만들고 해당 목차에 이동하는 페이지 안에 특정 위치로 이동했다가 다시 돌아 올수 있게 처리하세요.
+<h3 id="main01">페이지 이동</h3>
+	<ul>
+		<li><a href="/a01_start/a01_tag_basic.html">절대 주소 이동(내부)</a>
+		<li><a href="#go01">앵커로 이동 처리</a>
+		<li><a href="a03_page.html">내부페이지 이동</a>
+	</ul>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<h2 id="go01">앵커로 이동된 곳</h2>
+	<a href="#main01">다시 초기 화면으로 이동</a>
+[1단계:확인] 4. 테이블 안에 이미지를 포함시켜서, 해당 이미지를 클릭시 링크된 내용이 출력되게 처리해보세요.
+           (내부, 외부, 내부에 특정 위치)
+<table align="center" cellpadding="10" border="1" width="100">
+	<tr><th>사과</th><th>바나나</th><th>망고</th></tr>
+	<tr>
+		<td><a href="https://ko.wikipedia.org/wiki/사과" ><img src="/a00_img/apple.jpg" width="100" height="100"/></a></td>
+		<td><a href="https://ko.wikipedia.org/wiki/바나나" ><img src="/a00_img/banana.jpg" width="100" height="100"/></a></td>
+		<td><a href="https://ko.wikipedia.org/wiki/망고" ><img src="/a00_img/mango.jpg" width="100" height="100"/></a></td>
+	</tr>
+</table>
+[1단계:개념] 5. 하이프 링크 색상옵션 변경에 대하여 예제를 통해서 기술하세요.
+css3를 이용하여 링크 색 지정 가능
+ 	a:link{color:red;text-decoration:none;}
+	a:visited{color:blue;}
+	a:active{color:yellow;}
+[1단계:개념] 6. 하이프 링크의 target 옵션을 기술하세요.
+# 하이퍼링크의 target 속성
+1. target 속성에 따라서 새로운 창, 계층 구조의 부모 창, 특정한 frame 변경 등을 link로 처리할 수 있다.
+2. 속성값
+	1) _blank : 새로운 윈도우 창 로딩하면서 페이지 출력
+	2) _self : 현재 윈도우 창에서 변경(default)
+	3) _parent : 부모 윈도우 창을 변경
+	4) _top : 브라우저 윈도를 변경 처리
+[1단계:확인] 7. 전체페이지,상단페이지,왼쪽페이지,메인페이지(위쪽/아래쪽페이지)를 하나의 폴드에서 만들어
+           페이지를 파일로 만들고, 왼쪽페이지에서 _blank, _self, 프레임명 호출로 링크 확인을하고,
+           메인페이지 안에 아래쪽페이지에서 _parent, _top 옵션으로 구분하여 링크페이지가 열리는 것을 확인하세요.
+
+[1단계:확인] 8. 다운로드할 자료를 webapp 하위에 z01_download 폴드에 위치시키고, 다운로드 리스트를 3개
+          만든 후, 다운로드가 되게 처리하세요.
+<h3>다운로드할 자료</h3>
+<ul>
+	<li><a href="/z01_download/chicken.jpg" download>치킨 이미지 다운로드</a>
+	<li><a href="/z01_download/meat.jpg" download>삼겹살 이미지 다운로드</a>
+	<li><a href="z01_download/ramen.jpg" download>라면 이미지 다운로드</a>
+</ul>
+[1단계:개념] 9. 서버에 데이터를 전송하는 form의 속성과 하위 구성요소들의 특징을 기술하세요.
+# 웹폼
+1. 웹폼
+	1) 웹 페이지에서 사용자 입력을 받는 폼
+	2) 로그인, 등록, 검색, 예약, 쇼핑 등
+2. 폼 요소
+	1) 폼을 만드는 다양한 태그
+	2) input, textarea, select 등
+[1단계:확인] 10. 회원등록 form으로 아이디 패스워드 회원명 포인트 권한을 input으로 만들고, 등록버튼을 
+         클릭시, 다음페이지에서 입력된 내용을 출력하는 프로그램을 만드세요.
+<h3>회원등록 폼</h3>
+<hr>
+<form action="a04_show.jsp">
+	아이디 : <input type="text" name="id"/><br>
+	패스워드 : <input type="password" name="pw"/><br>
+	회원명 : <input type="text" name="name"/><br>
+	포인트 : <input type="number" name="point"/><br>
+	권한 : <input type="text" name="auth"/><br>
+	<input type="submit" value="등록"/>
+</form>
+a04_show.jsp
+<h2>서버에서 받은 아이디와 패스워드</h2>
+<h3>아이디:${param.id}</h3>
+<h3>패스워드:${param.pw}</h3>
+<h3>회원명:${param.name}</h3>
+<h3>포인트:${param.point}</h3>
+<h3>권한:${param.auth}</h3>
+ -->
+<!-- 정답
+[1단계:확인] 1. 온라인 쇼핑몰에 있는 내용과 같이 특정한 물품 2개 이미지와 함께 상세 설명 내용과 함께 표시되는
+            형식으로 테이블(3X3)을 구성하여 출력하세요
+           no  물품이미지 물품정보(물품명/가격/기타정보표기) 
+ -->
+<h3 align="center">판매 물품 정보</h3>
+<table align="center" width="50%" cellpadding="5px">
+	<col width="10%">
+	<col width="45%">
+	<col width="45%">
+	<thead>
+		<tr>
+			<th>no</th>
+			<th>물품이미지</th>
+			<th>물품정보</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td><img src="/a00_img/apple.jpg" width="100%" height="100"/></td>
+			<td>물품명:사과<br>가격:6000</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td><img src="/a00_img/banana.jpg" width="100%" height="100"/></td>
+			<td>물품명:바나나<br>가격:5000</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td><img src="/a00_img/mango.jpg" width="100%" height="100"/></td>
+			<td>물품명:망고<br>가격:10000</td>
+		</tr>
+	</tbody>
+</table>
+<!-- 
+[1단계:확인] 4. 테이블 안에 이미지를 포함시켜서, 해당 이미지를 클릭시 링크된 내용이 출력되게 처리해보세요.
+           (내부, 외부, 내부에 특정 위치)
+ -->
+<h3 align="center">판매 물품 정보(이미지 링크 처리)</h3>
+<table align="center" width="50%" cellpadding="5px">
+	<col width="10%">
+	<col width="45%">
+	<col width="45%">
+	<thead>
+		<tr>
+			<th>no</th>
+			<th>물품이미지</th>
+			<th>물품정보</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>
+				<a href="z01_detail.jsp?img=apple&pname=사과">
+					<img src="/a00_img/apple.jpg" width="100%" height="100"/>
+				</a>
+			</td>	
+			<td>물품명:사과<br>가격:6000</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>
+				<a href="z01_detail.jsp?img=apple&pname=바나나">
+					<img src="/a00_img/banana.jpg" width="100%" height="100"/>
+				</a>
+			</td>
+			<td>물품명:바나나<br>가격:5000</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>
+				<a href="z01_detail.jsp?img=apple&pname=망고">
+					<img src="/a00_img/mango.jpg" width="100%" height="100"/>
+				</a>
+			</td>
+			<td>물품명:망고<br>가격:10000</td>
+		</tr>
+	</tbody>
+</table>
+
+</body>
+</html>

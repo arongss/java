@@ -1,0 +1,35 @@
+package javaexp.a01_begin;
+
+public class A01_0829 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		/*
+		1. 코드 처리(메시지)
+		1) 자바의 컴파일과 실행과정을 설명하시오.
+		
+		2) 아래 내용을 설명하세요
+			- 문자열 선언 방법 : String name = "신아령";
+			- 정수형/실수형 선언과 할당 : int num01;
+									num01 = 30;
+									double 
+			
+		3) 변수명을 아래와 같이 선언하고 출력하세요
+			- 이름, 나이, 키
+			- 좋아하는 음악명, 발매연도
+			- 오늘 지출금액 목록과 비용, 합산
+			
+		2. ppt 자료 작성 : 파일로(~0831)
+			1) 자바 기본 환경 설정 ppt 자료로 작성하여 전달해 주세요.
+		 * 
+		 */
+		String name = "신아령";
+		int age = 28;
+		int tall = 162;
+		System.out.println("이름:"+name);
+		System.out.println("나이:"+age);
+		
+		
+	}
+
+}

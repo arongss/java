@@ -1,0 +1,3 @@
+id:himan	date:221010	period:4days	price:400000
+id:higirl	date:221020	period:2days	price:200000
+id:badman	date:221101	period:1days	price:100000

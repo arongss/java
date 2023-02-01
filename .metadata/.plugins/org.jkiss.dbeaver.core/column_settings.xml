@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+	<item id="NodeList/DBNProjectDatabases/DBNBookmarkFolder/DBNDiagramFolder/DBNResource">
+		<column name="이름" visible="true" order="0" width="111"/>
+		<column name="경로" visible="true" order="1" width="170"/>
+		<column name="최종 수정" visible="true" order="2" width="100"/>
+		<column name="크기" visible="true" order="3" width="100"/>
+	</item>
+	<item id="NodeList/DBNProjectDatabases/DBNResource/DBNBookmarkFolder/DBNDiagramFolder">
+		<column name="이름" visible="true" order="0" width="158"/>
+		<column name="경로" visible="true" order="1" width="219"/>
+		<column name="크기" visible="true" order="2" width="100"/>
+		<column name="최종 수정" visible="true" order="3" width="176"/>
+	</item>
+	<item id="NodeList/OracleSchema">
+		<column name="Name" visible="true" order="0" width="160"/>
+	</item>
+	<item id="NodeList/OracleTable">
+		<column name="Name" visible="true" order="0" width="100"/>
+		<column name="Stat Row Count" visible="true" order="1" width="121"/>
+		<column name="Tablespace" visible="true" order="2" width="100"/>
+		<column name="Comment" visible="true" order="3" width="100"/>
+	</item>
+	<item id="NodeList/OracleTableColumn">
+		<column name="컬럼명" visible="true" order="0" width="100"/>
+		<column name="#" visible="true" order="1" width="100"/>
+		<column name="Type" visible="true" order="2" width="117"/>
+		<column name="Type Mod" visible="true" order="3" width="100"/>
+		<column name="Not Null" visible="true" order="4" width="100"/>
+		<column name="디폴트" visible="true" order="5" width="100"/>
+		<column name="Comment" visible="true" order="6" width="100"/>
+	</item>
+	<item id="SchemaSelector">
+		<column name="Name" visible="true" order="0" width="160"/>
+	</item>
+	<item id="Suggestion/NodeList/OracleTableColumn">
+		<column name="컬럼명" visible="true" order="0" width="78"/>
+		<column name="#" visible="true" order="1" width="41"/>
+		<column name="Type" visible="true" order="2" width="125"/>
+		<column name="Type Mod" visible="false" order="3" width="100"/>
+		<column name="Not Null" visible="true" order="3" width="80"/>
+		<column name="디폴트" visible="true" order="4" width="67"/>
+		<column name="Comment" visible="true" order="5" width="89"/>
+	</item>
+	<item id="scriptSelectorViewer">
+		<column name="Script" visible="true" order="0" width="151"/>
+		<column name="Time" visible="true" order="1" width="202"/>
+		<column name="Info" visible="true" order="2" width="73"/>
+		<column name="Folder" visible="true" order="3" width="88"/>
+	</item>
+</items>

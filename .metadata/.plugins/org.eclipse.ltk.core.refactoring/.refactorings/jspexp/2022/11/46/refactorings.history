@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;a02_javascript&apos; to &apos;doc&apos;" description="Move &apos;a02_javascript&apos; to &apos;doc&apos;" destination="doc" element1="src/main/webapp/a01_javascript/a01_basic/a02_javascript" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1668149956470" updateReferences="true"/>
+</session>

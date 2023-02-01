@@ -1,0 +1,15 @@
+package springweb.a05_mvc.a01_controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import springweb.z01_vo.Emp;
+
+@Controller
+public class A02_DeptController {
+	
+	public String deptList( Dept sch) {
+		return "\\WEB-INF\\views\\a05_mvc\\a01_empList.jsp";
+	}
+}

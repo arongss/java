@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;proj01/src/main/webapp/a02_callnull.jsp&apos; to &apos;a02_callNull.jsp&apos;" description="Rename resource &apos;a02_callnull.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/a02_callnull.jsp" name="a02_callNull.jsp" stamp="1670378862291" updateReferences="true"/>
+</session>

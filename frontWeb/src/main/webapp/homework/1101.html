@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+2022-10-14
+[1단계:개념] 1. 이미지의 속성과 경로(상대적/절대적)을 기본예제를 통해 기술하세요.
+1. 같은 경로에 있는 이미지 호출
+	<img src="img01.jpg" width="100" height="100"/><br>
+2. 절대 경로로 이미지 호출
+	<img src="/a00_img/img02.jpg" width="100" height="100"/><br>
+[1단계:코드] 2. 과일의 종류를 상대적/절대적 경로에 1개씩 이미지를 넣고, 호출하여 출력하세요.
+<img src="img07.jpg" width="100" height="100"/><br>
+<img src="/a00_img/img08.jpg" width="100" height="100"/><br>
+[1단계:개념] 3. 리스트 정렬 태그의 기본 속성을 예제를 통해서 설명하세요.
+1. 순서 있는 리스트(ordered list) - <ol></ol>
+	1) type : 1, A, a, I, i로 li의 리스트에 앞에 정렬 문자를 포함해서 처리해준다.
+	2) start : 시작하는 문자를 지정해준다.
+2. 순서 없는 리스트(unordered list) - <ul></ul>
+	1) 번호나 순서가 없는 type에 지정한 특수 문자로 출력
+	2) type : disc(기본 설정), square(사각형 모양), circle(둥근 모양)
+3. 정의 리스트(definition list) - <dl></dl>
+	1) 타이틀과 내용 설명 형태로 리스트를 처리할 때 활용된다.
+	2) <dt> : definition title - 타이틀을 정의하는 요소
+		<dd> : definition data - 타이틀의 내용을 정의하는 요소s
+[1단계:코드] 4. 학원 출석시 등원 진행 순서를 정렬리스트로 로마자 V 부터 처리해보세요.
+<h2>학원 출석시 등원 진행 순서</h2>
+	<ol type="I" statr="V">
+		<li>출결 상태 체크
+		<li>결석/지각 처리
+		<li>결석/지각 사유 파악
+	</ol>
+[1단계:코드] 5. dl/ol/ul중첩리스트 태그를 활용하여 학교/반/번호와이름의 3단계 계층 구조의 데이터를 표현하세요.
+<h3>학교</h3>
+	<hr>
+	<ul type="square">
+		<li>1반
+			<ol type="1">
+				<li>홍길동
+				<li>김길동
+				<li>신길동
+			</ol>
+		<li>2반
+			<ol type="1">
+				<li>홍길동
+				<li>김길동
+				<li>신길동
+			</ol>
+		<li>3반
+			<ol type="1">
+				<li>홍길동
+				<li>김길동
+				<li>신길동
+			</ol>
+	</ul>
+[1단계:개념] 6. 테이블의 계층별 구성요소와 기본 속성을 예제를 통해서 기술하세요.
+# 테이블의 계층별 구성요소
+	table : 표 전체를 담는 컨테이너
+	caption : 표 제목
+	thead : 헤딩 셀 그룹
+	tfoot : 바닥 셀 그룹
+	tbody : 데이터 셀 그룹
+	tr : 테이블에서 행을 처리하는 태그
+	th : 테이블에서 열 제목(헤딩)에 들어갈 실제 데이터 태그
+	td : 테이블에서 body에 실제 데이터가 들어가는 태그
+[1단계:코드] 7. 테이블 cell 합치기 연습
+		1) 3X3 테이블에 중앙에 세로로 3개셀 합치기 처리 
+<table border="1" width="100" height="100">
+	<col width="33%"><col width="33%"><col width="34%">
+	<tr><td></td><td></td><td></td></tr>
+	<tr><td colspan="3"></td></tr>
+	<tr><td></td><td></td><td></td></tr>
+</table>
+		2) 4X4 테이블에 가장 왼쪽 셀  2개셀씩 세로로 합치기 처리 
+<table border="1" width="100" height="100">
+	<col width="25%"><col width="25%"><col width="25%"><col width="25%">
+	<tr><td rowspan="2"></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td></tr>
+	<tr><td rowspan="2"></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td></tr>	
+</table>
+		3) 10X10 테이블에 모두의 마블과 같이 중앙에는 비우고 상/하,좌/우 셀만있게 만드세요.
+<table border="1" width="100" height="100">
+	<col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%">
+	<col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%">
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+	<tr><td></td><td colspan="8" rowspan="8"><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td></tr>
+	<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+[1단계:코드] 8. 회원정보 테이블을 번호, 아이디, 패스워드, 이름, 포인트, 권한 형식으로 3명 데이터를 표현하세요.
+		간격, 넓이 등 오늘 배운 속성 활용
+<table cellpadding="5" cellspacing="5" border="5" width="600">
+	<col width="10%"><col width="20%"><col width="20%"><col width="20%"><col width="20%"><col width="10%">
+	<tr><th>번호</th><th>아이디</th><th>패스워드</th><th>이름</th><th>포인트</th><th>권한</th></tr>
+	<tr><td>1001</td><td>himan</td><td>7777</td><td>홍길동</td><td>1000</td><td>M</td></tr>
+	<tr><td>1002</td><td>godman</td><td>1234</td><td>김길동</td><td>500</td><td>U</td></tr>
+	<tr><td>1003</td><td>higirl</td><td>0000</td><td>신길동</td><td>1500</td><td>U</td></tr>
+</table>
+ -->
+</body>
+</html>

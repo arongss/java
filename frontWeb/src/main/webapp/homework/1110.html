@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+/*
+2022-11-10
+[1단계:개념] 1. position의 속성에 따른 속성값의 차이를 기술하세요.
+	# 박스의 배치 : position
+	1. normal flow
+		1) 웹 페이지에 나타난 순서대로 html 태그 배치
+		2) position 속성을 이용하여 normal flow 무시 가능
+	2. position 속성값을 이용한 배치 방법
+		1) static : default - normal flow로 처리
+		2) relative : 상대 배치 - 현재 위치를 기준으로 x축/y축을 이동한다.
+		3) absolute : 절대 배치
+		4) fixed : 고정 배치 - 화면 스크롤 상관없이 특정 위치 고수하는 것.
+	3. 유동 배치 : float 속성을 이용
+		1) float:left, float:right
+	4. position 속성을 사용할 때, 태그의 위치와 크기 설정옵션
+		1) 위치 설정 : top, bottom, left, right
+				top(위에서 부터 아래로 얼마나 내려오는지)
+				bottom(아래로 부터 위로 얼마나 올라가는지)
+				left(왼쪽으로 부터 오른쪽으로 떨어있는지)
+				right(오른쪽으로 부터 왼쪽으로 떨어있는지)	
+		2) 크기 : width, height
+[1단계:확인] 2. 화면 오른쪽 중앙 주요업무사항을 리스트한 내용을 화면이 스크롤링 되더라도 보일 수 있게 처리하세요.
+	#fixed{
+		position:fixed;
+		top:50%;right:50px;
+		width:100px;height:100px;
+		background:lightblue;
+	}
+	
+	<div id="fixed">공지사항!!</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><h2>다음 내용</h2>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><h2>다음 내용</h2>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><h2>다음 내용</h2>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><h2>다음 내용</h2>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><h2>다음 내용</h2>
+[1단계:개념] 3. visibility, display를 통해 보이지 않게 처리하는 속성값 내용과 이 둘간의 차이점을 기술하세요
+	visibility:hidden; - 보이지만 않고 해당 공간은 존재. width와 height값을 주었다면 그만큼 공간은 존재하게 됨
+	display:none; - 아예 사라지게 하는것. 보이지도 않고 해당 공간도 존재하지 않게 됨
+[1단계:확인] 4. a00_img폴드에 카드 관련 이미지를 오른쪽으로 리스트 보이게 하되 적절하게 겹치게 보이게 하시고
+               (z-index 활용) 및 클릭시, 카드가 보이지 않게 처리하세요.
+
+[1단계:개념] 5. 컨테츠형 태그(div,p)에서 해당 내용이 크기보다 넘칠 때, 처리하는 옵션을 기본예제를 통하여 설명하세요.
+	# overflow
+	1. 지정된 화면의 크기보다 더 많은 내용을 컨테이너형 요소에 포함될 때,
+		처리하는 속성
+	2. 속성값
+		hidden : 보이지 않게 처리
+		visible : 넘기게 보이게 처리
+		scroll : 스크롤 해서 보이게 처리
+[1단계:개념] 6. ul list-style-type의 여러 유형을 기술하세요.
+	# 리스트 모양을 꾸미는 css3 속성들
+	1. list-style-type : 아이템 마커 타입 지정
+		정렬 : decimal, armenian, georgian, cjk-ideographic, 
+				lower-alphe, upper-alpha, lower-roman, upper-roman
+		비정렬 : desc, circle, square
+		삭제 : none
+		
+	2. list-style-image : 아이템 마커 이미지 지정
+		ex) list-style-image:url("이미지상대/절대주소")
+	3. list-style-position : 아이템 마커의 출력 위치 지정(아이템 영역 내 혹은 영역 바깥)
+		outside : default
+		inside : 마커가 안쪽으로 출력
+	4. list-style : 위의 3개의 속성 값을 한 번에 지정하는 단축 속성
+[1단계:확인] 7. 네비게이션 바에서 이미지가 있는 메뉴리스트(좌우)를 만들어 출력하세요. 
+	nav{background:yellow;float:left;}
+	
+	<nav>카페메뉴
+	<ul style="list-style-image:url('../a00_img/marker.png')"><li>에스프레소<li>카푸치노<li>까페라떼</ul>
+	</nav>
+[1단계:개념] 8. 테이블에서 사용되는 css설정 옵션을 기술하세요.
+	# css3를 표 꾸미기
+	1. 적용 주요 옵션
+		1) border:표 테두리, border-bottom : 하단의 테두리 설정.
+		2) border-collapse:collapse; 중복된 테두리 합치기
+		3) height/width : th/td의 폭과 넓이 개별적 조정
+		4) padding : 여백설정
+		5) text-align: td 안에 정렬처리
+		6) nth-child(even) : 짝수 행단위 처리
+		7) tr:hober : 마우스커서 이동시 처리
+[1단계:확인] 9. 부서정보 테이블을 오늘 배운 css 설정하여 화면에 출력하세요. 
+	table{border-collapse:collapse;}
+	th,td{padding:5px;height:15px;text-align:right;width:100px;}
+	thead>tr>th, .al_cen{text-align:center;}
+	thead{background:navy;color:yellow;}
+	tbody tr:nth-child(even){background:aliceblue;}
+	tbody tr:hover{background:pink;}
+	
+	<h3>부서정보</h3>
+	<table border> 
+		<thead>
+			<tr><th>사원번호</th><th>사원명</th><th>급여</th><th>직급</th><th>부서번호</th></tr>
+		</thead>
+		<tbody>
+			<tr><td>1001</td><td>홍길동</td><td>3500</td><td>대리</td><td>10</td></tr>
+			<tr><td>1002</td><td>김길동</td><td>3000</td><td>사원</td><td>20</td></tr>
+			<tr><td>1003</td><td>오길동</td><td>4000</td><td>팀장</td><td>30</td></tr>
+			<tr><td>1004</td><td>신길동</td><td>3000</td><td>사원</td><td>40</td></tr>
+		</tbody>
+	</table>
+[1단계:개념] 10. form 요소 객체에서 사용되는 css 설정 옵션을 기술하세요.
+	# 폼 꾸미기 
+	1. 글자 색상 지정
+		input[type=text]{color:red}
+	2. 테두리 만들기
+		input[type=text]{
+			border:2px solid skyblue;
+			border-radius:5px;
+		}
+	3. 마우스 올라올 때
+		input[type=text]:hover{
+			background:aliceblue;
+		}
+	4. 포커스를 받을 때
+		input:focus{
+			font-size:120%;
+		}
+[1단계:확인] 11. 부서정보 등록 form을 form관련 css 설정하여 화면에 출력하세요. 
+	label {display: block;padding: 10px;}
+	label span {display: inline-block;width: 90px;text-align: center;padding: 10px;}
+	input, textarea {color: blue;border: 2px solid skyblue;border-radius: 5px;}
+	input[type=text]:focus, textarea:focus {font-size: 120%;}
+	input:hover, textarea:hover {background: aliceblue;}
+	
+	<form>
+		<label> 
+			<span>사원번호</span><input type="text" placeholder="1001"><br>
+		</label> 
+		<label> 
+			<span>사원명</span><input type="text" placeholder="홍길동"><br>
+		</label> 
+		<label> 
+			<span>직책</span><input type="text" placeholder="사원"><br>
+		</label> 
+		<label> 
+			<span>기타</span> 
+			<textarea placeholder="추가사항을 입력해주세요"></textarea>
+		</label> 
+		<label> 
+			<span></span><input type="submit" value="등록">
+		</label>
+	</form>
+[1단계:확인] 12. js의 화면 출력 형식 3가지를 기술하고, 차이점을 검색해보고 정리해보세요.
+	// 1. alert()으로 출력 : 경고창에 출력
+	alert("js 시작입니다.")
+	// 2. console로 출력 : 브라우저 콘솔창에 출력, 오류를 확인하려면 f12 키를 눌러서 console창을 확인하면 된다.
+	console.log("js start!!")
+	// 3. document으로 출력 : document.write는 화면이 로딩이 되고나서 다시 호출하면 화면이 지워진다. test용으로만 사용을 권장한다.
+	document.write("<h2>javascript start!!</h2>");
+*/
+/* 정답
+[1단계:확인] *4. a00_img폴드에 카드 관련 이미지를 오른쪽으로 리스트 보이게 하되 적절하게 겹치게 보이게 하시고
+               (z-index 활용) 및 클릭시, 카드가 보이지 않게 처리하세요.
+	img{width:100px;height:150px;position:absolute;}
+	img#card01{left:0px;top:0px;}
+	img#card02{left:30px;top:30px;}
+	img#card03{left:60px;top:60px;}
+	img#card04{left:90px;top:90px;}
+	img:hover{z-index:5;}
+	img:active{display:none;}
+	
+	<img src="/a00_img/spade-2.png" id="card01">
+	<img src="/a00_img/spade-3.png" id="card02">
+	<img src="/a00_img/spade-7.png" id="card03">
+	<img src="/a00_img/spade-A.png" id="card04">
+	<br><br><br><br><br><br><br><br><br><br><br><br>
+[1단계:확인] *7. 네비게이션 바에서 이미지가 있는 메뉴리스트(좌우)를 만들어 출력하세요.
+	#menus>ul{
+		padding:5px;
+		list-style-type:none;
+		list-style-image:url('/a00_img/marker.png');
+		list-style-position:inside;
+	}
+	#menus>ul>li{
+		padding:10px;
+		float:left;
+		border:1px solid blue; 
+		border-radius:8px;
+	}
+	#menus a{
+		color:gray; 
+		text-decoration:none; 
+	}
+	
+	<h3>네비게이션 메뉴(왼쪽에서 오른쪽으로 리스트 처리)</h3>
+	<nav id="menus">
+		<ul>
+			<li><a href="#">메뉴1</a></li>
+			<li><a href="#">메뉴2</a></li>
+			<li><a href="#">메뉴3</a></li>
+			<li><a href="#">메뉴4</a></li>
+		</ul>
+	</nav>
+[1단계:확인] *11. 부서정보 등록 form을 form관련 css 설정하여 화면에 출력하세요.
+
+[1단계:확인] *12. js의 화면 출력 형식 3가지를 기술하고, 차이점을 검색해보고 정리해보세요.
+	alert("안녕하세요");  화면에 경고창으로 출력
+	document.write("<h2>안녕하세요</h2>");  기존에 있는 내용을 지우고
+				document.write()를 통해서 화면을 구현 처리..
+		ps) body 밑에 document.querySelector("h1").innerText="안녕하세요"
+		DOM객체를 인식해서 해당 요소에 속성값으로 처리가 된다.
+	console.log("안녕하세요");  브라우저에서 console메뉴에 출력된 내용을 확인할
+		때, 사용한다. js단에 에러 트래킹시 사용된다.
+*/
+	label{
+		display:block;
+	}
+	label>span{
+		display:inline-block;
+		width:30%;
+		padding:5px;
+		text-align:center;
+	}
+	input[type=text]{
+		color:navy;
+		border-radius:5px;
+		border:2px solid skyblue;
+	}
+	input[type=text]:focus{
+		font-size:120%;
+	}
+</style>
+</head>
+<body>
+	<h2>부서정보 등록</h2>
+	<form>
+		<label><span>부서번호</span>
+			<input type="text" name="deptno" placeholder="부서번호입력"></label>
+		<label><span>부서명</span>
+			<input type="text" name="dname" placeholder="부서명입력"></label>
+		<label><span>부서위치</span>
+			<input type="text" name="loc" placeholder="부서위치입력"></label>
+		<label><span></span><input type="submit" name="submit" value="부서등록"></label>
+	</form>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 절대 주소로 설정 -->
+<link href="/homework/a00_style10.css" type="text/css" rel="stylesheet">
+<style>
+	@import url(a00_style11.css); 
+</style>
+</head>
+<body>
+	<h2>외부 css에 의해 적용!!</h2>
+<!-- 
+2022-11-07
+[1단계:개념] 1. 색상 처리 16코드에 대한 설명과 기본 색상 객체의 활용 코드를 기술하세요.
+	# 색코드
+	1. 문자열 또는 rgb 조합형태로 색상을 지원하여 설정할 수 있다.
+	2. 색코드 처리
+		#rrggbb
+		rr:빨간색
+		gg:초록색
+		bb:파란색
+		각 코드값을 16진수로 0~255가지(00~FF)의 내용을 선택가능
+	3. 해상 색코드는 영문으로 매핑되는 색상명 있다.
+		- 구글 색상코드 참고
+		ex) brown : #A52A2A
+			darkorange : #FF8C00
+[1단계:확인] 2. h1를 빨주노초파남보 7가지를 선언하고, 색상 폼에 의해 선택되어 배경색이 변경되게 하세요.
+<form>
+	<h1>빨</h1>
+	<h1>주</h1>
+	<h1>노</h1>
+	<h1>초</h1>
+	<h1>파</h1>
+	<h1>남</h1>
+	<h1>보</h1>
+	색상1:<input type="color" name="c1" value="red"
+			onchange="document.querySelectorAll('h1')[0].style.background=this.value"/><br>
+	색상2:<input type="color" name="c2" value="orange"
+			onchange="document.querySelectorAll('h1')[1].style.background=this.value"/><br>
+	색상3:<input type="color" name="c3" value="yellow"
+			onchange="document.querySelectorAll('h1')[2].style.background=this.value"/><br>
+	색상4:<input type="color" name="c4" value="green"
+			onchange="document.querySelectorAll('h1')[3].style.background=this.value"/><br>
+	색상5:<input type="color" name="c5" value="blue"
+			onchange="document.querySelectorAll('h1')[4].style.background=this.value"/><br>
+	색상6:<input type="color" name="c6" value="navy"
+			onchange="document.querySelectorAll('h1')[5].style.background=this.value"/><br>
+	색상7:<input type="color" name="c7" value="purple"
+			onchange="document.querySelectorAll('h1')[6].style.background=this.value"/><br>
+	<input type="submit"/>
+</form>
+[1단계:개념] 3. 날짜 처리의 요소객체의 기본 형식을 기술하세요.
+	# 시간 정보 입력 폼 요소
+	1. <input type="month|week|date|datetime-local">
+		1) 시간 정보만 입력 가능한 폼 요소
+		1) 속성 및 내용
+			month : 년월
+			week : 년/몇번째주
+			date : 년/월/일
+			datatime-local : 해당 나라의 시간
+				년/월/일/오전,오후/시/분/초/100분의1초
+			time : 시/분
+[1단계:확인] 4. 사원의 정보를 아래와 같이 입력하여 다음 페이지에서 출력되게 처리하세요.
+            입사일(년/월/일) : [     ]
+            다음프로젝트(년/@주째) : [     ]
+             회원룸 예약:
+               방번호 : []1~10
+               날짜(년/월/일) :[    ] 
+               시간(@@:@@) : [    ]
+	<h2>사원 정보</h2>
+	<form>
+		입사일:<input type="date" name="hiredate"/><br>
+		다음프로젝트:<input type="week" name="project"/><br>
+		<fieldset>
+			<legend>회원룸 예약</legend>
+			방번호:<input type="number" name="room" min="1" max="10" step="1"/><br>
+			날짜:<input type="date" name="roomdate"/><br>
+			시간:<input type="time" name="roomtime"/><br>
+		</fieldset>
+		<input type="submit"/>
+	</form>
+[1단계:확인] 5. 나이에 따른 할인율을 선택해서 놀이 공원 입장료를 처리하세요.
+            기본 입장료:[   ]
+            나이:[   ] ==> number
+            할인율:[    ] ==> %표기
+            [입장]
+	<h2>놀이공원 입장료</h2>
+	<script type="text/javascript">
+		function chDis(val){
+			document.querySelector("#showDis").innerText=val;
+		}
+	</script>
+	<form>
+		나이:<input type="number" name="age" min="1" max="100" step="1"/><br>
+		할인율:<input type="range" onchange="chDis(this.value)"
+			name="discount" min="0" max="100" list="disRatios"/>
+			<span id="showDis">50</span>%
+		<datalist id="disRatios">
+			<option value="10">
+			<option value="15">
+			<option value="20">
+			<option value="30">
+			<option value="50">
+		</datalist>
+		<input type="submit" value="입장"/>
+	</form>
+[1단계:확인] 6. 회원가입을 일반회원과 관리자를 구분해서 가입화면을 구성(타이틀과 그룹처리)해보세요.
+           일반회원 : 아이디 패스워드 이름 나이 포인트 일반주소 
+           관리자 : 아이디 패스워드 이름 권한 소속사 이메일
+	<form>
+		<fieldset>
+			<legend>일반회원</legend>
+			아이디:<input><br>
+			패스워드:<input type="password"><br>
+			이름:<input><br>
+			나이:<input><br>
+			포인트:<input><br>
+			일반주소:<input><br>
+		</fieldset>
+		<fieldset>
+			<legend>관리자</legend>
+			아이디:<input><br>
+			패스워드:<input type="password"><br>
+			이름:<input><br>
+			권한:<input><br>
+			소속사:<input><br>
+			이메일:<input><br>
+		</fieldset>
+		<input type="submit" value="등록">
+	</form>
+[1단계:개념] 7. css선언 기본 구성요소과 속성 형식을 예제를 통해 기술하세요.
+	# css3 스타일 시트의 구성요소
+		1. span 텍스트를 20픽셀 blue로 출력하는 css3 스타일 시트 설정
+			span : 선택자(selector)
+				css3 스타일 시트를 html페이지에 적용하도록 만든 이름으로
+				보통 기본적으로 태그명, #아이디명, .클래스명으로 주로 사용된다.
+			color, font-size : 프로퍼티
+				스타일 속성 이름, 약 200개 정도의 프로퍼티 있음.
+			blue, 20px : 프로퍼티 값
+				스타일 속성에 해당하는 값을 지정
+[1단계:확인] 8. 음악 가사를 카피해와 css3를 통해 여백과 색상이 처리된 화면을 구성하세요.
+<style type="text/css">
+	body {
+		background-color: linen;
+		color: blueviolet;
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+	h2 {
+		text-align: center;
+		color: darkred;
+	}
+</style>
+	<h2>off my face</h2>
+	<p>One touch and you got me stoned
+		Higher than I've ever known
+		You call the shots and I follow
+		Sunrise but the night's still young
+		No words, but we speak in tongues
+		If you let me, I might say too much
+	</p>
+	<p>Your touch blurred my vision
+		It's your world, and I'm just in it
+		Even sober I'm not thinkin' straight
+	</p>
+	<p>'Cause I'm off my face, in love with you
+		I'm out my head, so into you
+		And I don't know how you do it
+		But I'm forever ruined by you, ooh-ooh-ooh
+	</p>
+[1단계:개념] 9. css선언 형식3가지(현재 페이지, inline, 외부파일)을 기본예제를 통해서 선언하세요.
+	# css스타일 시트 만드는 방법 3가지
+		1) style	/style 태그에 스타일 시트 설정
+			- 전형적인 스타일 시트 설정
+		2) style 속성에 스타일 시트 작성
+			- <input stype="text-align:center;"
+		3) 스타일 시트를 별로 파일로 작성
+			<link> 태그나 #import로 불러 사용
+[1단계:확인] 10. 외부파일 선언 및 호출로 a00_sytle10.css, a00_sytle11.css에 선언하고
+            해당 파일에서 적용된 냉요을 확인하세요.
+	<link href="a00_style10.css" type="text/css" rel="stylesheet">
+		<style type="text/css">
+			@import url(a00_style11.css)
+		</style>
+[1단계:개념] 11. css선언의 우선 순위를 예제를 통해 기술하세요. 
+	# css3 규칙과 우선 순위
+	1. css3 스타일은 부모 태그로부터 상속
+		1) 부모 태그(부모 요소)
+			자신을 둘러싸고 있는 태그
+			<table>
+				<tr>
+					<td>
+			td의 부모 태그는 tr이고, tr의 부모태그는 table 이다.
+		2) 상위에 style은 하위에 상속되어 적용된다.
+			<tr style="text-align:center">
+				<td>
+			상위에 tr에 선언한 css은 모든 하위 td에 적용된다.
+	2. 태그의 적용 가능 스타일 우선 순위
+		1) inline으로 해당 태그에 선언된 style속성이 최우선 순위
+		2) 한페이지당 선언한 <style>에 선언된 css
+		3) 외부파일로 선언한 <link href="외부파일"> 선언한태그
+		4) 브라우저의 디폴드 스타일
+ -->
+
+<!-- 정답
+[1단계:확인] *2. h1를 빨주노초파남보 7가지를 선언하고, 색상 폼에 의해 선택되어 배경색이 변경되게 하세요.
+	<h1 align="center">빨<input type="color" 
+		onchange="document.querySelectorAll('h1')[0].style.background=this.value"/></h1>
+	<h1 align="center">주<input type="color" 
+		onchange="document.querySelectorAll('h1')[1].style.background=this.value"/></h1> 
+	<h1 align="center">노<input type="color" 
+		onchange="document.querySelectorAll('h1')[2].style.background=this.value"/></h1> 
+	<h1 align="center">초<input type="color" 
+		onchange="document.querySelectorAll('h1')[3].style.background=this.value"/></h1> 
+	<h1 align="center">파<input type="color" 
+		onchange="document.querySelectorAll('h1')[4].style.background=this.value"/></h1> 
+	<h1 align="center">남<input type="color" 
+		onchange="document.querySelectorAll('h1')[5].style.background=this.value"/></h1> 
+	<h1 align="center">보<input type="color" 
+		onchange="document.querySelectorAll('h1')[6].style.background=this.value"/></h1> 
+[1단계:확인] *4. 사원의 정보를 아래와 같이 입력하여 다음 페이지에서 출력되게 처리하세요.
+            입사일(년/월/일) : [     ]
+            다음프로젝트(년/@주째) : [     ]
+             회원룸 예약:
+               방번호 : []1~10
+               날짜(년/월/일) :[    ] 
+               시간(@@:@@) : [    ]
+<h2>사원정보</h2>
+<form action="z02_show.jsp">
+	입사일:<input type="date" name="hiredate"/><br>
+	다음프로젝트:<input type="week" name="nextProject"/><br>
+	<fieldset>
+		<legend>회의룸 예약</legend>
+		방번호:<input type="number" name="roomnum" min="1" max="10"/><br>
+		날짜:<input type="date" name="meetdate"/><br>
+		시간:<input type="time" name="meettime"/>
+	</fieldset>
+	<input type="submit"/>
+</form>
+[1단계:확인] *5. 나이에 따른 할인율을 선택해서 놀이 공원 입장료를 처리하세요.
+            기본 입장료:[   ]
+            나이:[   ] ==> number
+            할인율:[    ] ==> %표기
+            [입장]
+<script>
+	function chRatio(val){
+		document.querySelector("#shDis").innerText=val;
+	}
+</script>
+<h3>놀이공원 매표소에서</h3>
+<form>
+	기본 입장료:<input type="number" value="50000"/><br>
+	나이:<input type="number" min="1" max="100" value="1"/><br>
+	할인율:<input type="range" min="0" max="100" step="5" 
+			onchange="chRatio(this.value)" value="0"/><span id="shDis"></span>%<br>
+	<input type="submit" value="입장">
+</form>
+[1단계:확인] *10. 외부파일 선언 및 호출로 a00_sytle10.css, a00_sytle11.css에 선언하고
+            해당 파일에서 적용된 냉요을 확인하세요.
+ -->
+</body>
+</html>

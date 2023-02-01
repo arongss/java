@@ -1,0 +1,30 @@
+package javaexp.baekjoon;
+
+import java.util.*;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] arr;
+		int A = sc.nextInt();
+		for(int i = 0 ; i < A ; i++) {
+			int n = sc.nextInt();
+			arr = new int[n];
+			double sum = 0;
+			for(int j = 0 ; j < n ; j++) {
+				int grade = sc.nextInt();
+				arr[j] = grade;
+				sum += grade;
+			}
+			double avg = (sum / n) ;
+			double count = 0;
+			for(int k = 0 ; k < n ; k++) {
+				if(arr[k] > avg) {
+					count++;
+				}
+			}
+			System.out.printf("%.3f%%\n",(count/n)*100);
+		}
+		sc.close();
+	}
+}

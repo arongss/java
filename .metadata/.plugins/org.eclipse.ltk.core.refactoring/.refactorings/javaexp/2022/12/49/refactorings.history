@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;todayhouse.exerd&apos; to &apos;project_study&apos;&#x0D;&#x0A;- Original project: &apos;javaexp&apos;&#x0D;&#x0A;- Destination element: &apos;project_study&apos;&#x0D;&#x0A;- Original element: &apos;todayhouse.exerd&apos;" description="Copy file" element1="src/javaexp/project_study/todayhouse.exerd" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1669855502171" target="/jspexp/src/main/webapp/project_study" units="0" version="1.0"/>
+</session>

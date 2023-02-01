@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+/*
+# 폼 꾸미기 
+1. 글자 색상 지정
+	input[type=text]{color:red}
+2. 테두리 만들기
+	input[type=text]{
+		border:2px solid skyblue;
+		border-radius:5px;
+	}
+3. 마우스 올라올 때
+	input[type=text]:hover{
+		background:aliceblue;
+	}
+4. 포커스를 받을 때
+	input:focus{
+		font-size:120%;
+	}
+*/
+	label {
+		display: block;
+		padding: 10px;
+	}
+	label span {
+		display: inline-block;
+		width: 90px;
+		text-align: center;
+		padding: 10px;
+	}
+	input, textarea {
+		color: blue;
+		border: 2px solid skyblue;
+		border-radius: 5px;
+	}
+	input[type=text]:focus, input[type=email]:focus textarea:focus {
+		font-size: 120%;
+	}
+	input:hover, textarea:hover {
+		background: aliceblue;
+	}
+	/*
+	ex) 로그인 화면을 만들되 focus와 border-radius을 적용하여 출력하세요.
+	*/
+	#loginForm label span {
+		display: inline-block;
+		width: 40%;
+		text-align: center;
+		padding: 5px;
+		background: alicblue;
+	}
+	#loginForm input {
+		color: navy;
+		border: 2px solid skyblue;
+		border-radius: 5px;
+	}
+	#loginForm input[type=text]:focus, input[type=password]:focus {
+		font-size: 120%;
+		background: aliceblue;
+	}
+</style>
+</head>
+<body>
+	<div id="loginFrom">
+		<form>
+			<fieldset style="width:30%";>
+				<label>
+					<span>아이디</span><input type="text" placeholder="아이디"><br>
+				</label> 
+				<label> 
+					<span>패스워드</span><input type="password" placeholder="패스워드"><br>
+				</label> 
+				<label> 
+					<span></span><input type="submit" value="로그인">
+				</label>
+			</fieldset>
+		</form>
+	</div>
+	<form>
+		<label> 
+			<span>이름</span><input type="text" placeholder="Elvis"><br>
+		</label> 
+		<label> 
+			<span>email</span><input type="email" placeholder="Evis@graceland.com"><br>
+		</label> 
+		<label> 
+			<span>내용</span> 
+			<textarea placeholder="메세지를 남겨주세요"></textarea>
+		</label> 
+		<label> 
+			<span></span><input type="submit" value="등록">
+		</label>
+	</form>
+
+</body>
+</html>

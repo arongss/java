@@ -1,0 +1,4 @@
+com.tomato.exerd.core.subscription.SubscriptionPrefConstants.LOCK_EDITING=false
+com.tomato.exerd.preference.product.lastSelectedProductId=com.tomato.db.oracle_10g
+eclipse.preferences.version=1
+last-known-version=3.3.30.20221201-1631

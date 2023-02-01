@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;img06.jpg&apos; to &apos;a05_error&apos;&#x0D;&#x0A;- Original project: &apos;frontWeb&apos;&#x0D;&#x0A;- Destination element: &apos;a05_error&apos;&#x0D;&#x0A;- Original element: &apos;img06.jpg&apos;" description="Copy file" element1="src/main/webapp/a01_img/img06.jpg" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1670304429407" target="/jspexp/src/main/webapp/a02_jsp/a05_error" units="0" version="1.0"/>
+</session>

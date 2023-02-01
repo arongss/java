@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+# 폼요소
+0. 기본 형식
+	<태그명 type="">
+1. input 태그
+	1) 대부분은 input 태그로 시작하여 type의 속성에 따라 나타난다.
+	2) type 속성
+		text : 한줄 텍스트 입력 창 ex) <input type="text"
+		password : 암호 입력을 위한 한줄 텍스트 입력 창
+		button : 단순 버튼
+		hidden : 데이터는 보이지 않지만 전송할 필요가 있을 때, 활용
+			ex) 기능버튼 등록/수정/삭제이 있지만, 요청값에 의해서 해당 내용을 전송해야할 때, 활용된다.
+				즉, 요청값이 표시가 되지는 않지만 그 요청값이 프로세스에 따라 보이지 않게 전송될 때
+				활용된다.
+		image : 이미지 버튼
+		checkbox : 체크박스(다중선택) []
+		radio :라디오박스(단일선택) ()
+		file : 파일 선택
+		month|week|date|time|datatime-local : 년,월,일,시간등의 입력창
+		number|range : 스핀 버튼과 슬라이드바로 편리한 숫자 입력창
+		color : 색상 선택 창
+		email|url|tel|search : 이메일, url, 전화번호, 검색키워드 등 형식 검사 기능을 가진
+			텍스트 입력 창
+		submit : form 전체 데이터를 서버에 전송하는 퍼튼
+		reset : form 전체 데이터를 입력 중, 초기화가 필요할 때, 클릭시 초기화 처리 버튼	
+2. select 태그
+	1) 기본 형식
+		<select name="">
+			<option selected value=""></option>
+			<option value=""></option>
+	2) 선택 형식으로 처리할 수 있는 요소 객체
+3. button
+	1) 기본 형식
+		<button type="button|submit|reset">버튼의 레이블</button>
+		주의) button 태그의 default type이 submit이기에 설정하지 않고, 버튼을 클릭하면
+		서버로 전송되어 모든 데이터가 초기화된다.
+	2) 버튼 모양 요소객체
+4. textarea
+	1) 기본 형식
+		<textarea cols="10" rows="20"></textarea>
+	2) 여러줄 텍스트 입력 창
+ -->
+	<input>
+</body>
+</html>

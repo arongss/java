@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>닉네임 설정 - 에브리타임</title>
+<link href="../project_3/etcss.css" rel="stylesheet">
+<style type="text/css">
+
+</style>
+<script>
+function change(){
+	alert("닉네임을 설정하면 30일간 변경할 수 없습니다. 변경하시겠습니까?");
+}
+</script>
+</head>
+<body>
+<div>
+<header>
+<div class="head">
+	<div class="wrap">
+		<div class="logo">
+			<a>
+				<figure class="logoimage"></figure>
+			</a>
+			<h1>
+				<p class="subname">에브리타임</p>
+				<p class="name">대학교</p>
+			</h1>
+		</div>
+		<nav>
+			<div><a>게시판</a></div>
+			<div><a>시간표</a></div>
+			<div><a>강의실</a></div>
+			<div><a>학점계산기</a></div>
+			<div><a>친구</a></div>
+			<div><a>책방</a></div>
+			<div><a>캠퍼스픽</a></div>
+		</nav>
+		<div class="account">
+			<a class="iconms"></a>
+			<a class="iconmy"></a>
+		</div>
+	</div>
+</div>
+</header>
+
+<form class="container">
+	<section>
+		<h1>닉네임 설정</h1>
+		<div class="input">
+			<div class="label">
+				<label>닉네임</label>
+			</div>
+			<input type="text" maxlength="10" placeholder="닉네임"/>
+		</div>
+		<div class="rules">
+			<p>
+				※ 닉네임을 설정하면 
+				<span class="caution">30일간 변경할 수 없습니다.</span>
+			</p>
+		</div>
+		<input type="submit" value="닉네임 설정" onclick="change()"/> 
+	</section>
+</form>
+
+<footer>
+	<a>이용약관</a>
+	<a>개인정보처리방침</a>
+	<a>청소년보호정책</a>
+	<a>커뮤니티이용규칙</a>
+	<a>문의하기</a>
+	<a>© 에브리타임</a>
+</footer>
+</div>
+</body>
+<script type="text/javascript">
+
+</script>
+</html>

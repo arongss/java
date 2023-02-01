@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="/a00_com/a01_common.css" rel="stylesheet">
+<style type="text/css">
+/*
+
+*/
+</style>
+<script>
+/*
+
+*/
+
+</script>
+</head>
+<body>
+	물건명:<input type="text" name="pname"/>
+	가격:<input type="text" name="price"/>
+	갯수:<input type="text" name="cnt"/>
+	<input type="button" value="구매" onclick="buy()"/>
+	<div id="container"></div>
+</body>
+<script type="text/javascript">
+function buy(){
+	var xhr = new XMLHttpRequest()
+	alert(xhr);
+	var pname = document.querySelector("[name=pname]").value
+	var price = document.querySelector("[name=price]").value
+	var cnt = document.querySelector("[name=cnt]").value
+	var div = document.querySelector("#container")
+	var page = "z04_data.jsp?pname="+pname+"&price="+price+"&cnt="+cnt
+	xhr.open("get",page,false);
+	xhr.send()
+	div.innerText = xhr.responseText
+}
+/*
+
+*/
+var div = document.querySelector("#container")
+div.innerHTML=""
+//
+</script>
+</html>

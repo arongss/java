@@ -1,0 +1,7 @@
+package springweb.a05_mvc.a03_dao;
+
+import java.util.List;
+
+public interface A02_DeptDao {
+	public List<Dept> getDeptList(Dept sch);
+}

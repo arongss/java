@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="/a00_com/a01_common.css" rel="stylesheet">
+<style type="text/css">
+/*
+
+*/
+</style>
+<script>
+/*
+
+*/
+
+</script>
+</head>
+<body>
+	입력:<input type="text" id="in01"/>
+	<div id="container"></div>
+	<table height="300px" id="tab01">
+		<tr><td>1</td><td>2</td><td>3</td></tr>
+		<tr><td>4</td><td>5</td><td>6</td></tr>
+		<tr><td>7</td><td>8</td><td>9</td></tr>
+	</table>
+
+</body>
+<script type="text/javascript">
+/*  
+// 키 입력시 키코드 출력(in01로 설정시 입력칸안에서 입력시에만 키코드 출력됨)
+var div = document.querySelector("#container")
+var in01 = document.querySelector("#in01")
+in01.onkeyup=function(){ // this : 현재 화면 Window객체를 지칭
+	div.innerText=event.keyCode;
+}
+// 키 입력시 키코드 출력(this로 설정시 입력칸밖에서 입력시에도 키코드 출력됨)
+var div = document.querySelector("#container")
+var in01 = document.querySelector("#in01")
+this.onkeyup=function(){ // this : 현재 화면 Window객체를 지칭
+	div.innerText=event.keyCode;
+}
+// 키입력시 테이블표 색상 순서대로 변경
+var tds = document.querySelectorAll("#tab01 td")
+//tds[4].innerText="선택"
+tds[4].style.backgroundColor="yellow"
+var cIdx=0;
+this.onkeyup=function(){ // this : 현재 화면 Window객체를 지칭
+	for(var idx=0;idx<tds.length;idx++){
+		tds[idx].style.backgroundColor=""
+	}
+	tds[cIdx%9].style.backgroundColor="yellow"
+	cIdx++
+}
+*/
+// 방향키대로 색상 변경
+var div = document.querySelector("#container")
+var in01 = document.querySelector("#in01")
+var tds = document.querySelectorAll("#tab01 td")
+//tds[4].innerText="선택"
+tds[4].style.backgroundColor="yellow"
+var cIdx=0;
+// this.이벤트 : 전체 화면에서 이벤트를 발생
+this.onkeyup=function(){ 
+	for(var idx=0;idx<tds.length;idx++){
+		tds[idx].style.backgroundColor=""
+	}
+	tds[4].style.backgroundColor="yellow"
+}
+this.onkeydown=function(){ // this : 현재 화면 Window객체를 지칭
+	if(event.keyCode>=37&&event.keyCode<=40){
+		for(var idx=0;idx<tds.length;idx++){
+			tds[idx].style.backgroundColor=""
+		}
+	}
+	if(event.keyCode==37) tds[3].style.backgroundColor="yellow"
+	if(event.keyCode==38) tds[1].style.backgroundColor="yellow"
+	if(event.keyCode==39) tds[5].style.backgroundColor="yellow"
+	if(event.keyCode==40) tds[7].style.backgroundColor="yellow"
+	//tds[cIdx%9].style.backgroundColor="yellow"
+	//cIdx++
+	console.log("##")
+	console.log(event.keyCode)
+	div.innerText=event.keyCode;
+}
+
+//
+</script>
+</html>
