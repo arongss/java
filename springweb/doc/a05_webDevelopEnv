@@ -1,12 +1,21 @@
 # 웹 개발 환경 설정
 1. network환경
 	서버에 고정 ip//도메인
+	
+	클라이언트	========>	서버
+						고정ip/git
+						svn서버
+						tomcat
+						DB서버
+	네트웍으로 ip						
+	
+	
 2. 처리한 내용
 	1) 소스공유 : svn/git
 	2) 웹서버 : tomcat,
 	3) 배포 : source ==> tomcat
-		서버용 eclipse에서 svn/git 연동해서 처리
-	4) DB서버 : 
+		 서버용 eclipse에서 svn/git 연동해서 처리
+	4) DB서버 :
 		- 서버 설치 : 계정생성, table생성, 데이터입력, sql 작성
 		- 1521 포트를 방화벽에서 로딩
 	5) 클라이언트 테스트
@@ -17,11 +26,44 @@
 			http://kb.co.ko/project01/index.html
 		
 		
+		
 		DB서버
-3. 서버 처리
-	1) web 서버 만들기
-		a02_javaexp
+3. 서버 처리(서버pc) 
+	1) svn 서버 만들기
+		visual svn server
+		다운로드
+	2) web 서버 만들기(서버pc에)
+		c:\a02_javaexp
 			eclipse
 			workspace
-	2) svn 서버 만들기
+		svn이 설치된 eclipse에서 DBeaver
+		기존에 있는 eclipse의 DBEAVER로 프로젝트 공통
+			DB사용..
+	DB 설치시, 비밀번호 : @@@@  관리자 계정 비밀번호            
+ 	C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql
+ 	계정은 system//1111계정으로 접근해서 계정을 만들고,
+ 		계정생성(id,pass), 
+ 		계정에 권한을 부여(접근, 테이블생성 및 사용하는 권한, 물리적 파일을 접근하여 사용  
+ 	
+ 	// ex) scott/tiger 비번호는 대소문자 구분
+ 	GRANT CONNECT,RESOURCE,UNLIMITED TABLESPACE TO SCOTT IDENTIFIED BY tiger;
+ 	// ex) himan/7777  계정생성 및 비번호 설정.
+	ALTER USER SCOTT DEFAULT TABLESPACE USERS;
+	ALTER USER SCOTT TEMPORARY TABLESPACE TEMP;
+	 	
+ 	GRANT CONNECT,RESOURCE,UNLIMITED TABLESPACE TO himan IDENTIFIED BY 7777;
+	ALTER USER himan DEFAULT TABLESPACE USERS;
+	ALTER USER himan TEMPORARY TABLESPACE TEMP;	  	
+ 	// tablespace는 물리적 저장위치와 연결되어 있어, 데이터베이스가 만들어지고 실제 물리적
+ 	// 위치의 저장소도 연결하여야 한다. 	
+	컨테이너 부분에 DB 연결 정보와 계정/비번으로 스프링환경 설정을 완료한다.
+		<property name="url" value="jdbc:oracle:thin:@106.10.23.227:1521:xe"/>	
+		<property name="username" value="himan"/>	
+		<property name="password" value="7777"/>						
+
 		
+	
+
+
+
+				 

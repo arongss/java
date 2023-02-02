@@ -1,6 +1,8 @@
 #Tomcat publish data
-#Wed Feb 01 21:20:22 KST 2023
+#Fri Feb 03 08:34:06 KST 2023
 org.eclipse.jst.jee.server\:/binary\:C\:\\a01_javaexp\\workspace\\oliveyoung\\src\\main\\webapp\\WEB-INF\\lib\\spring-web-5.0.8.RELEASE.jar=WEB-INF/lib/spring-web-5.0.8.RELEASE.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\a01_javaexp\\workspace\\springweb\\src\\main\\webapp\\WEB-INF\\lib\\tomcat-embed-websocket-9.0.41.jar=WEB-INF/lib/tomcat-embed-websocket-9.0.41.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\a01_javaexp\\workspace\\springweb\\src\\main\\webapp\\WEB-INF\\lib\\spring-web-5.0.8.RELEASE.jar=WEB-INF/lib/spring-web-5.0.8.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\a01_javaexp\\workspace\\board\\src\\main\\webapp\\WEB-INF\\lib\\spring-web-5.0.8.RELEASE.jar=WEB-INF/lib/spring-web-5.0.8.RELEASE.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\a01_javaexp\\workspace\\board\\src\\main\\webapp\\WEB-INF\\lib\\tomcat-embed-websocket-9.0.41.jar=WEB-INF/lib/tomcat-embed-websocket-9.0.41.jar
 org.eclipse.jst.jee.server\:/binary\:C\:\\a01_javaexp\\workspace\\oliveyoung\\src\\main\\webapp\\WEB-INF\\lib\\tomcat-embed-websocket-9.0.41.jar=WEB-INF/lib/tomcat-embed-websocket-9.0.41.jar

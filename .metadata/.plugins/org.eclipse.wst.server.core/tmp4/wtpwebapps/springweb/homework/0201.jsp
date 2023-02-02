@@ -42,14 +42,32 @@
 [1단계:확인] 4. (조별과제) 원격에 있는 DB서버에 system/1111 계정으로 접근하여 조원들의 각 계정을 만들어서,
            해당 계정으로 접속하여 member테이블을 만들고 데이터를 넣고, 다른 조원 계정으로 접속해서 데이터를
            확인하세요.
-	-- 관리자 계정 접속 system/1111 후 user01/user01 계정 생성
-	GRANT CONNECT,RESOURCE,UNLIMITED TABLESPACE TO user01 IDENTIFIED BY user01;
-	ALTER USER user01 DEFAULT TABLESPACE USERS;
-	ALTER USER user01 TEMPORARY TABLESPACE TEMP;
+	DB 설치시, 비밀번호 : @@@@ 관리자 계정 비밀번호
+	C:\oraclexe\app\oracle\product\11.2.0\server\rdbms\admin\scott.sql
+	계정은 system//1111계정으로 접근해서 계정을 만들고,
+		계정생성(id,pass),
+		계정에 권한을 부여(접근, 테이블생성 및 사용하는 권한, 물리적 파일을 접근하여 사용)
+	
+	// ex) scott/tiger 비번호는 대소문자 구분
+	GRANT CONNECT,RESOURCE,UNLIMITED TABLESPACE TO SCOTT IDENTIFIED BY tiger;
+	// ex) himan/7777 계정생성 및 비번호 설정.
+	ALTER USER SCOTT DEFAULT TABLESPACE USERS;
+	ALTER USER SCOTT TEMPORARY TABLESPACE TEMP;
+	
+	GRANT CONNECT,RESOURCE,UNLIMITED TABLESPACE TO himan IDENTIFIED BY 7777;
+	ALTER USER himan DEFAULT TABLESPACE USERS;
+	ALTER USER himan TEMPORARY TABLESPACE TEMP;
+	// tablespace는 물리적 저장위치와 연결되어 있어, 데이터베이스가 만들어지고 실제 물리적
+	// 위치의 저장소도 연결하여야 한다.
+	
 [1단계:확인] 5. (조별과제) 프로젝트 진행할 다이나믹웹프로젝트 만들어, 스프링환경으로 처리하여, controller로
             첫화면이 로딩되게 처리하세요.
 [1단계:확인] 6. (조별과제) 프로젝트 진행할 다이나믹웹프로젝트 만들어, 스프링환경으로 처리하여, controller로
             DB처리가 되는 첫화면이 로딩되게 처리하세요.
+	컨테이너 부분에 DB 연결 정보와 계정/비번으로 스프링환경 설정을 완료한다.
+		<property name="url" value="jdbc:oracle:thin:@49.238.181.236:1521:xe"/>
+		<property name="username" value="himan"/>
+		<property name="password" value="7777"/>
 [1단계:개념] 7. vue의 디렉티브 3가지 형식 {{}}, v-text, v-html의 차이를 기술하세요.
 	# 단방향 디렉티브
 	1) {{모델명}} : 모델데이터를 처리하는 기본 형식
