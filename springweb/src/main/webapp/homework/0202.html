@@ -57,6 +57,7 @@
 	});
 	<div class="jumbotron text-center">
 		<h3 v-if="id=='himan'&&pass=='7777'">로그인성공</h3>
+		<h3 v-else-if="id==''&&pass==''">아이디와패스워드를 입력하세요</h3>
 		<h3 v-else>로그인실패</h3>
 	</div>
 	<form id="frm01" class="form-inline"  method="post">
@@ -113,6 +114,13 @@
 			<td>{{t.score}}</td></tr>
 	</tbody>
 	</table>  
+
+## 풀이 ##
+[1단계:확인] 4. v-if 조건문을 활용하여 입력한 아이디와 패스워드가 맞으면 로그인성공/로그인실패/아이디와패스워드를 입력하세요로
+	1) 모델 데이터 선언
+	2) UI 화면구성
+	3) 디렉티브 선언(양방향/단방향 선언)
+	4) 조건문 디렉티브
  */
 	$(document).ready(function(){
 		var vm = new Vue({

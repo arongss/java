@@ -31,16 +31,14 @@
 		<%-- 
 		
 		--%>	
-	}); 
+	});
 </script>
 </head>
 
 <body>
 <div class="jumbotron text-center">
-	<h2>웹 default화면</h2>
-<%-- 
-  <h2 data-toggle="modal" data-target="#exampleModalCenter"></h2>
---%>
+  <h2 >웹 초기 화면 로딩</h2>
+
 </div>
 <div class="container">
 	<form id="frm01" class="form-inline"  method="post">

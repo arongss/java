@@ -4,6 +4,12 @@ SELECT * FROM ovProduct;
 SELECT * FROM ovShoppingCart;
 SELECT * FROM ovQuestion;
 
+SELECT * FROM OVMEMBER 
+WHERE name LIKE '%'||''||'%'
+AND id LIKE '%'||''||'%'
+AND auth LIKE '%'||''||'%';
+SELECT DISTINCT auth FROM OVMEMBER;
+
 DROP TABLE ovQuestion;
 DROP TABLE ovShoppingCart;
 DROP TABLE ovProduct;
@@ -13,9 +19,13 @@ DROP TABLE ovMember;
 CREATE TABLE ovMember(
 	id varchar2(50) PRIMARY KEY,
 	pass varchar2(50),
+	name varchar2(50),
 	auth varchar2(20),
-	nickname varchar2(50),
 	address varchar2(100),
+	joindate DATE,
+	birthday DATE,
+	phone varchar2(100),
+	email varchar2(100),
 	point NUMBER 
 );
 CREATE TABLE ovCategory(
@@ -51,5 +61,9 @@ CREATE TABLE ovQuestion(
 	anContent varchar2(500)
 );
 DELETE FROM ovMember WHERE id='';
-INSERT INTO ovMember VALUES ('admin123','7777','관리자','ad123','서울 마포구',0);
-INSERT INTO ovMember VALUES ('user123','7777','사용자','ur123','서울 마포구',1000);
+INSERT INTO ovMember VALUES ('admin123','7777','홍길동','관리자','서울 마포구',sysdate,'1995-05-27','010-1111-2222','ad123@naver.com',0);
+INSERT INTO ovMember VALUES ('baby123','7777','김길동','베이비올리브','서울 종로구',sysdate,'1999-01-01','010-3333-4444','bb123@naver.com',1000);
+INSERT INTO ovMember VALUES ('pink123','7777','신길동','핑크올리브','서울 강북구',sysdate,'1996-07-23','010-5555-6666','pk123@naver.com',5000);
+INSERT INTO ovMember VALUES ('green123','7777','마길동','그린올리브','서울 강남구',sysdate,'1998-11-12','010-7777-8888','gr123@naver.com',10000);
+INSERT INTO ovMember VALUES ('black123','7777','오길동','블랙올리브','서울 구로구',sysdate,'1997-05-04','010-9999-0000','bk123@naver.com',15000);
+INSERT INTO ovMember VALUES ('gold123','7777','하길동','골드올리브','서울 강서구',sysdate,'2000-03-20','010-1234-1234','gd123@naver.com',20000);

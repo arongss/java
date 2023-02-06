@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >	
+<mapper namespace="oliveyoung.dao.OvMemberDao">
+	<select id="memberList" resultType="ovmember" parameterType="ovmember">
+		SELECT * FROM OVMEMBER 
+		WHERE name LIKE '%'||#{name}||'%'
+		AND id LIKE '%'||#{id}||'%'
+		AND auth LIKE '%'||#{auth}||'%'
+	</select>
+	<select id="getAuthComb" resultType="string">
+		SELECT DISTINCT auth FROM OVMEMBER
+	</select>
+	<insert id="memberJoin" parameterType="ovmember">
+		INSERT INTO OVMEMBER VALUES (#{id},#{pass},#{name},#{auth},#{address},sysdate,#{birthday},#{phone},#{email},1000)
+	</insert>
+</mapper>		
+		

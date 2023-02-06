@@ -34,13 +34,13 @@
 		<column name="Name" visible="true" order="0" width="160"/>
 	</item>
 	<item id="Suggestion/NodeList/OracleTableColumn">
-		<column name="컬럼명" visible="true" order="0" width="78"/>
-		<column name="#" visible="true" order="1" width="41"/>
-		<column name="Type" visible="true" order="2" width="125"/>
+		<column name="컬럼명" visible="true" order="0" width="96"/>
+		<column name="#" visible="true" order="1" width="35"/>
+		<column name="Type" visible="true" order="2" width="135"/>
 		<column name="Type Mod" visible="false" order="3" width="100"/>
-		<column name="Not Null" visible="true" order="3" width="80"/>
-		<column name="디폴트" visible="true" order="4" width="67"/>
-		<column name="Comment" visible="true" order="5" width="89"/>
+		<column name="Not Null" visible="true" order="3" width="74"/>
+		<column name="디폴트" visible="true" order="4" width="61"/>
+		<column name="Comment" visible="true" order="5" width="83"/>
 	</item>
 	<item id="scriptSelectorViewer">
 		<column name="Script" visible="true" order="0" width="151"/>
