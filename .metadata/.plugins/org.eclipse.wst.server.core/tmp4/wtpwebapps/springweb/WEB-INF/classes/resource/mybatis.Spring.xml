@@ -10,6 +10,7 @@
 		<typeAlias alias="code" type="springweb.z01_vo.Code"/>
 		<typeAlias alias="member" type="springweb.z01_vo.Member"/>
 		<typeAlias alias="salgrade" type="springweb.z01_vo.Salgrade"/>
+		<typeAlias alias="filerep" type="springweb.z01_vo.FileRep"/>
 	</typeAliases>
 	<!-- 2. 사용 XXXMapper.xml을 추가(dao와 mapper 1:1) -->
 	<mappers>
@@ -17,6 +18,7 @@
 		<mapper resource="resource/A02_DeptMapper.xml"/>
 		<mapper resource="resource/A03_MemberMapper.xml"/>
 		<mapper resource="resource/A04_SalMapper.xml"/>
+		<mapper resource="resource/A05_FileMapper.xml"/>
 	</mappers>
 
 </configuration>

@@ -16,14 +16,16 @@
 			#{refno},#{subject},#{content},#{writer},
 			0, sysdate, sysdate)
 	</insert>
-	<select id="getBoard" resultType="board" parameterType="int">
-		SELECT * FROM BOARD
-		WHERE NO = #{no}
-	</select>
+	<!-- 조회 -->
 	<update id="uptReadCnt" parameterType="int">
 		UPDATE BOARD 
 			SET READCNT = readcnt+1
 		WHERE NO = #{no}
 	</update>
+	<select id="getBoard" resultType="board" parameterType="int">
+		SELECT * FROM BOARD
+		WHERE NO = #{no}
+	</select>
+	
 </mapper>		
 		

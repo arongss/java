@@ -54,7 +54,16 @@
       --%>   
       $("#goMain").click(function(){
          location.href="${path}/list.do"         
-      });      
+      });
+      $("#uptBtn").click(function(){
+    	  
+      })
+      $("#delBtn").click(function(){
+    	  
+      })
+      $("#repBtn").click(function(){
+    	  
+      })
    });
 </script>
 </head>
@@ -136,8 +145,9 @@
             </div>
           </div> 
           <div class="mb-4"></div>
-          <button id="regBtn" class="btn btn-warning btn-lg btn-block" type="button">게시물 수정</button>
+          <button id="uptBtn" class="btn btn-warning btn-lg btn-block" type="button">게시물 수정</button>
           <button id="delBtn" class="btn btn-danger btn-lg btn-block" type="button">게시물 삭제</button>
+          <button id="repBtn" class="btn btn-success btn-lg btn-block" type="button">답글</button>
           <button id="goMain" class="btn btn-info   btn-lg btn-block" type="button">조회 화면</button>
         </form>
       </div>

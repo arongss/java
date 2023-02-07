@@ -29,8 +29,16 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		<%-- 
-		
+		#a10_fileUpload.jsp
+			controller(A05_FileUploadController.java)
+			if(report.getOriginalFilename()!=null) {
+				d.addAttribute("msg", "업로드 성공");
+			}
 		--%>	
+		var msg = "${msg}"
+		if(msg!=""){
+			alert(msg)
+		}
 	});
 </script>
 </head>
